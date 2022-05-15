@@ -17,13 +17,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        List<SlideModel> slideModels=new ArrayList<>();
-        slideModels.add(new SlideModel(  "https://picsum.photos/id/237/200/30e"));
-        slideModels.add(new SlideModel(  "https://picsum.photos/seed/picsum/200/300"));
-        slideModels.add(new SlideModel(  "https://picsum.photos/200/300?grayscale"));
-        slideModels.add(new SlideModel(  "https://picsum.photos/id/237/200/300"));
+        List<SlideModel> imageSlide=new ArrayList<>();
+        imageSlide.add(new SlideModel(  "https://picsum.photos/id/237/200/30e"));
+        imageSlide.add(new SlideModel(  "https://picsum.photos/seed/picsum/200/300"));
+        imageSlide.add(new SlideModel(  "https://picsum.photos/200/300?grayscale"));
+        imageSlide.add(new SlideModel(  "https://picsum.photos/id/237/200/300"));
 
         ImageSlider imageSlider = findViewById(R.id.image_slider);
-        imageSlider.setImageList(slideModels, true);
+        imageSlider.setImageList(imageSlide, true);
     }
 }
