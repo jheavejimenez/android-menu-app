@@ -8,16 +8,77 @@
 
     <com.denzcoskun.imageslider.ImageSlider
         android:id="@+id/image_slider"
-        android:layout_width="wrap_content"
-        android:layout_height="200dp"
+        android:layout_width="380dp"
+        android:layout_height="197dp"
         android:layout_margin="10dp"
         app:auto_cycle="true"
+        app:corner_radius="20"
         app:delay="0"
-        app:period="3000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:corner_radius="20"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:period="2000" >
 
+    </com.denzcoskun.imageslider.ImageSlider>
+
+    <ScrollView
+        android:layout_width="389dp"
+        android:layout_height="432dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_slider">
+
+        <LinearLayout
+            android:id="@+id/linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout"
+                android:layout_width="378dp"
+                android:layout_height="134dp"
+                android:layout_marginTop="48dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.488"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/image_slider">
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="89dp"
+                    android:layout_marginBottom="77dp"
+                    android:text="Chicken joy"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:typeface="monospace" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="124dp"
+                    android:layout_height="96dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toStartOf="@+id/textView1"
+                    app:srcCompat="@drawable/ic_launcher_background"
+                    tools:srcCompat="@drawable/ic_launcher_background" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
