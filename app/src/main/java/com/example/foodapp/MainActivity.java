@@ -25,11 +25,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         List<SlideModel> imageContent = new ArrayList<>();
-        ImageSlider imageSlider = findViewById(R.id.image_slider);
 
+        ImageSlider imageSlider = findViewById(R.id.image_slider);
         linearLayout = findViewById(R.id.linear_layout);
+
         for (String s : imagesUri) {
             imageContent.add(new SlideModel(s));
+            
         }
 
         imageSlider.setImageList(imageContent, true);
