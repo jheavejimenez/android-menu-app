@@ -24,14 +24,17 @@
 
     </com.denzcoskun.imageslider.ImageSlider>
 
-    <ListView
-        android:layout_width="385dp"
-        android:layout_height="505dp"
-        android:layout_marginTop="10dp"
+    <app.num.numandroidpagecurleffect.PageCurlView
+        android:id="@+id/pagecurlView"
+        android:layout_width="379dp"
+        android:layout_height="465dp"
+        android:layout_marginTop="28dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image_slider"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.064">
+
+    </app.num.numandroidpagecurleffect.PageCurlView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
