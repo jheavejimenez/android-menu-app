@@ -1,8 +1,5 @@
 package com.example.foodapp;
-
 import android.os.Bundle;
-import android.widget.LinearLayout;
-
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,12 +9,17 @@ import com.denzcoskun.imageslider.models.SlideModel;
 import java.util.ArrayList;
 import java.util.List;
 
+import app.num.numandroidpagecurleffect.PageCurlView;
+
 public class MainActivity extends AppCompatActivity {
-    LinearLayout linearLayout;
-    String[] imagesUri= new String[]{
-            "https://picsum.photos/id/237/200/30e",
-            "https://picsum.photos/seed/picsum/200/300",
-            "https://picsum.photos/200/300?grayscale"
+    PageCurlView pageCurlView;
+
+    // get image in drawable folder
+    int[] imagesUri= new int[]{
+            R.drawable.images1,
+            R.drawable.images2,
+            R.drawable.images,
+            R.drawable.share
     };
 
     @Override
@@ -25,15 +27,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         List<SlideModel> imageContent = new ArrayList<>();
+        List<Integer> imageIds = new ArrayList<>();
 
         ImageSlider imageSlider = findViewById(R.id.image_slider);
-        linearLayout = findViewById(R.id.linear_layout);
+        pageCurlView =findViewById(R.id.pagecurlView);
 
-        for (String s : imagesUri) {
-            imageContent.add(new SlideModel(s));
-            
+        for (int j : imagesUri) {
+            imageIds.add(j);
+            imageContent.add(new SlideModel(j));
         }
 
+        pageCurlView.setCurlView(imageIds);
+        pageCurlView.setCurlSpeed(100);
         imageSlider.setImageList(imageContent, true);
     }
 }
